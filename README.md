@@ -1,6 +1,5 @@
 ## IVI
 
-
 ```bash
 npm run dev
 # для старта проект
@@ -12,14 +11,13 @@ npm run dev
 
 ## Использовали
 
- - i18
- - Framer Motion
- - Swiper
+- i18
+- Framer Motion
+- Swiper
 
 ## Архитектура
 
-- [Feature-sliced.Design](https://feature-sliced.design/docs/get-started)   
-
+- [Feature-sliced.Design](https://feature-sliced.design/docs/get-started)
 
 ## Deploy on Vercel
 
