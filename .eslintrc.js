@@ -1,0 +1,38 @@
+module.exports = {
+  env: {
+    browser: true,
+    es2021: true,
+    node: true,
+  },
+  extends: [
+    "next/core-web-vitals",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "airbnb",
+    "airbnb-typescript",
+    "plugin:prettier/recommended",
+  ],
+  overrides: [],
+  parser: "@typescript-eslint/parser",
+  parserOptions: {
+    project: "./tsconfig.json",
+    tsconfigRootDir: __dirname,
+    ecmaVersion: "latest",
+    sourceType: "module",
+  },
+  plugins: ["react", "@typescript-eslint", "prettier"],
+  rules: {
+    "import/no-named-as-default": "off",
+    "import/prefer-default-export": "off",
+    "import/no-extraneous-dependencies": "off",
+    "import/no-duplicates": "off",
+    "import/order": "off",
+    "import/no-self-import": "off",
+    "import/no-cycle": "off",
+    "import/no-relative-packages": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/function-component-definition": "off",
+  },
+};
