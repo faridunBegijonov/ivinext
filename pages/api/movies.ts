@@ -1,7 +1,7 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from "next";
-import { IMoviesType } from "./types";
 import moviesModel from "@/pages/api/model/movies.model";
+import { IMoviesType } from "./types/movies.type";
 
 export default function handler(
   req: NextApiRequest,

@@ -1,5 +1,5 @@
 export interface INavbarType {
   title: string;
   route: string;
-  icon?: string | any;
+  icon?: string | undefined;
 }

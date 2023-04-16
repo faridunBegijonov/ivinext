@@ -16,7 +16,7 @@ export const BottomNavigationComponent: FC = () => {
             href={route}
             key={title}
           >
-            <Image src={icon} alt="Img" width={23} height={23} />
+            <Image src={icon!} alt="Img" width={23} height={23} />
             <p
               className={`pt-1.5 text-[10px] ${
                 pathname === route && "font-bold"
