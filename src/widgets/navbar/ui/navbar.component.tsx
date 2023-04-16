@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 import { ButtonComponent, Container } from "@/src";
 import { navbarModel } from "../model";
 import { INavbarType } from "../types";
@@ -7,13 +7,16 @@ import Link from "next/link";
 import { BiUser } from "react-icons/bi";
 import { IoMdNotificationsOutline } from "react-icons/io";
 import { useRouter } from "next/router";
+import { DropNavbarComponent } from ".";
+import { AnimatePresence } from "framer-motion";
 
 export const NavbarComponent: FC = () => {
   const { pathname } = useRouter();
+  const [dropdown, setDropdown] = useState<boolean>(false);
   return (
     <nav>
       <Container>
-        <div className="flex w-full items-center justify-between py-2 md:py-5">
+        <div className="relative flex w-full items-center justify-between py-2 md:py-5">
           <div className="flex items-center justify-between">
             <div>
               <Link href="/">
@@ -41,15 +44,25 @@ export const NavbarComponent: FC = () => {
             </div>
           </div>
           <div className="flex items-center">
-            <div className="w-[200px] md:w-[250px]">
+            <div
+              onMouseOver={() => setDropdown(true)}
+              className="w-[200px] md:w-[250px]"
+            >
               <ButtonComponent
-                px="px-1.4"
+                px="px-1.3"
                 py="py-2"
                 size="text-[12px] md:text-sm"
                 link="/"
               >
                 Смотреть 30 дней бесплатно
               </ButtonComponent>
+              <AnimatePresence>
+                {dropdown && (
+                  <div onMouseOut={() => setDropdown(false)}>
+                    <DropNavbarComponent />
+                  </div>
+                )}
+              </AnimatePresence>
             </div>
             <div className="hidden items-center justify-between md:flex lg:hidden">
               <div className="cursor-pointer p-3 text-[#828187]  transition-colors duration-500 hover:text-white">
