@@ -1,6 +1,6 @@
-import { IMoviesType } from "../types";
 import superForius from "../../../backend/images/superForius/superForius.webp";
 import hesAllthat from "../../../backend/images/hesAllthat/hesAllthat.webp";
+import { IMoviesType } from "../types/movies.type";
 
 const moviesModel: IMoviesType[] = [
   {
