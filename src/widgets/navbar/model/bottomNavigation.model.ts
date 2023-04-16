@@ -1,6 +1,6 @@
 import { INavbarType } from "../types";
 
-export const bottomnavigationModel: INavbarType[] = [
+export const bottomNavigationModel: INavbarType[] = [
   {
     title: "Мой Иви",
     route: "/",

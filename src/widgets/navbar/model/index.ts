@@ -1,2 +1,2 @@
 export * from "./navbar.model";
-export * from "./bottomnavgigation.model";
+export * from "./bottomNavigation.model";
