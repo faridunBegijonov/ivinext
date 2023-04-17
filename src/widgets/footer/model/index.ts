@@ -1,1 +1,2 @@
-export * from "./footer.model";
+export * from "./footer.about.model";
+export * from "./footer.partition.model";
