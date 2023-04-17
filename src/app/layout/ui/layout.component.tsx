@@ -1,6 +1,7 @@
 import { FC } from "react";
 import { ILayoutType } from "../types";
 import { BottomNavigationComponent, NavbarComponent } from "@/src/widgets";
+import { FooterComponent } from "@/src/widgets/footer";
 
 export const LayoutComponent: FC<ILayoutType> = ({ children }: ILayoutType) => {
   return (
@@ -10,7 +11,9 @@ export const LayoutComponent: FC<ILayoutType> = ({ children }: ILayoutType) => {
       <div className="lg:hidden">
         <BottomNavigationComponent />
       </div>
-      <div className="hidden lg:block">footer</div>
+      <div className="hidden lg:block">
+        <FooterComponent />
+      </div>
     </>
   );
 };
